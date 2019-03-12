@@ -40,6 +40,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    'modules/twitter'
   ],
 
   /*
@@ -50,7 +51,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }

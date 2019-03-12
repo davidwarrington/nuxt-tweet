@@ -14,7 +14,11 @@ const params = {
     include_rts: false
 }
 const callback = (error, tweets, response) => {
-	if (!error) fs.outputJSON('./tweets.json', tweets.slice(0, 5), { spaces: 4 })
+	if (!error) fs.outputJSON('./tweets/tweets.json', tweets.slice(0, 5), { spaces: 4 })
 }
 
-client.get(endpoint, params, callback)
+export default function NuxtTwitter(config) {
+	this.nuxt.hook('build:before', generator => {
+		client.get(endpoint, params, callback)
+	})
+}
