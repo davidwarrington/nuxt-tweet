@@ -1,11 +1,13 @@
 const Twitter = require('twitter')
 const fs = require('fs-extra')
+const dotenv = require('dotenv')
+dotenv.config()
 
 const client = Twitter({
-	consumer_key: '[CONSUMER KEY]',
-    consumer_secret: '[CONSUMER SECRET]',
-    access_token_key: '[ACCESS TOKEN]',
-    access_token_secret: '[ACCESS TOKEN SECRET]'
+	consumer_key: process.env.CONSUMER_KEY,
+    consumer_secret: process.env.CONSUMER_SECRET,
+    access_token_key: process.env.ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.ACCESS_TOKEN_SECRET
 })
 
 const endpoint = 'statuses/user_timeline'
