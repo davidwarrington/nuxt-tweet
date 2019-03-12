@@ -15,6 +15,9 @@
     "nuxt": "^2.4.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "dotenv": "^6.2.0",
+    "fs-extra": "^7.0.1",
+    "nodemon": "^1.18.9",
+    "twitter": "^1.7.1"
   }
 }
